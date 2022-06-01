@@ -22,7 +22,7 @@ const DropDown = () => {
                 setSearchData(res.data)
 
             }catch(err){
-
+            console.log(err)
             }
         }
         dropDownList()

@@ -1,6 +1,6 @@
 import  {useState, useMemo} from 'react';
 import styles from "../../styles/website/Login.module.css";
-import useToggle from "../hooks/useToggle";
+
 
 
 import {useRouter} from "next/router";
@@ -14,7 +14,7 @@ import phone from 'phone'
 import postalCodes from 'zipcodes-regex'
 
 
-const GuestCheckOut = ({handleClick, setShowModal}) => {
+const GuestCheckOut = ({setShowModal}) => {
     const options = useMemo(() => countryList().getData(), [])
     const dispatch = useDispatch()
     const router = useRouter()

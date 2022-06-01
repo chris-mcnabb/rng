@@ -14,9 +14,19 @@ module.exports = {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
+
     "plugins": [
         "react"
     ],
     "rules": {
+      "react/no-unescaped-entities": "off",
+      "@next/next/no-page-custom-font": "off",
+      "no-undef" : "off",
+      "no-unused-vars": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "react/no-unknown-property": "off",
+
     }
+
 }
