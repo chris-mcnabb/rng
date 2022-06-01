@@ -30,6 +30,7 @@ const Slider = ({pics, as}) => {
            { pics ? <div className={styles.wrapper} style={{transform: `translateX(${-100 * index}vw)`}}>
 
             {pics.map((img) => (
+
                 img.pic.category === 'webPic' &&
                 <div key={img._id} className={styles.imgContainer}>
                     <Image className={styles.img} src={img.pic.img} priority={true} alt="" layout="fill" as={as}
