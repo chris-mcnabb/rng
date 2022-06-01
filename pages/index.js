@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import styles from '../styles/Home.module.css'
 import Announcement from "../components/website/Announcement";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import axios from "axios";
 import Slider from "../components/website/Slider";
 import VendorLogos from "../components/website/VendorLogos";
@@ -18,7 +18,7 @@ export default function Home({images}) {
 
 
     return (
-        <>
+
 
             <div className={styles.container}>
 
@@ -34,7 +34,7 @@ export default function Home({images}) {
              <Slider pics={images} as={'image'}/>
                 <VendorLogos logos={images} as={'logo'} width={width}/>
             </div>
-        </>
+
     )
 };
 export const getStaticProps = async () =>{
