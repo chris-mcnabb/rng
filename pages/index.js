@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Fragment } from "react"
+import {Fragment, useEffect} from "react"
 import styles from '../styles/Home.module.css'
 import Announcement from "../components/website/Announcement";
 import {useState} from "react";
@@ -13,11 +13,12 @@ export default function Home({images}) {
 
     const { height, width } = windowDimensions();
     const [sale, setSale] = useState(false)
+
   const dispatch = useDispatch()
 
 
-
     return (
+
 
 
             <div className={styles.container}>
@@ -37,18 +38,12 @@ export default function Home({images}) {
 
     )
 }
-export const getServerSideProps = async () =>{
+export const getServerSideProps = async() => {
+  const res = await axios.get(process.env.VERCEL_URL+`/api/images`);
+  return{
+    props:{
+      images: res.data,
 
-
-    const img = await axios.get(process.env.VERCEL_URL+`/api/images`);
-
-
-    return{
-        props:{
-
-            images: img.data,
-
-        }
     }
+  }
 };
-

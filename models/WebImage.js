@@ -1,21 +1,11 @@
 const mongoose = require('mongoose');
 
 const WebImageSchema = new mongoose.Schema({
-        webPic: {
-            type: String,
+        pic: {
+          type: {type: String},
+          img: {type: String},
+          link: {type: String}
         },
-        vendorLogo: {
-            type: String,
-        },
-    construction: {
-            type: String
-    },
-        video: {
-            type: String,
-        },
-        link: {
-            type: String,
-        }
 
     },
     {timestamps: true }

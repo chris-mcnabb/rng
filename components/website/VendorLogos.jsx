@@ -41,11 +41,11 @@ const imageWidth = (width) => {
 
                 <div>
                     {logos ?<div className={styles.imageContainer}>
-                        {logos.map((image, idx) => (
-                            image.vendorLogo &&
-                            <div className={imageStyle(width)} key={idx} as={as}>
+                        {logos.map((image) => (
+                            image.pic.category === 'vendorLogo' &&
+                            <div className={imageStyle(width)} key={image._id} as={as}>
 
-                                <Image key={idx} src={image.vendorLogo} alt='' height={imageHeight(width)}
+                                <Image key={image._id} src={image.pic.img} alt='' height={imageHeight(width)}
                                        width={imageWidth(width)} priority={true} objectFit='contain' as={as}
                                        crossOrigin="anonymous"/>
 

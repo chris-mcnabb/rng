@@ -19,3 +19,14 @@
 .dimensions{
     display: none;
 }
+.sliderWrapper {
+    width: 600vw;
+    height: 100%;
+    display: flex;
+    white-space:nowrap;
+    transition: all 1.5s ease-in-out;
+    animation-name: scroll;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}

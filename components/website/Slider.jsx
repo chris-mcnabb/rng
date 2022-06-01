@@ -16,9 +16,7 @@ const Slider = ({pics, as}) => {
         }
     }
     console.log(index)
-    /*<div className={styles.intro}>
-        <button className={styles.button}>SHOP NOW</button>
-</div>*/
+
     return (
        <div className={styles.container}>
 
@@ -32,9 +30,9 @@ const Slider = ({pics, as}) => {
            { pics ? <div className={styles.wrapper} style={{transform: `translateX(${-100 * index}vw)`}}>
 
             {pics.map((img) => (
-                img.webPic &&
+                img.pic.category === 'webPic' &&
                 <div key={img._id} className={styles.imgContainer}>
-                    <Image className={styles.img} src={img.webPic} priority={true} alt="" layout="fill" as={as}
+                    <Image className={styles.img} src={img.pic.img} priority={true} alt="" layout="fill" as={as}
                            objectFit="cover"/>
 
                 </div>
