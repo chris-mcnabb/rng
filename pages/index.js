@@ -36,7 +36,7 @@ export default function Home({images}) {
             </div>
 
     )
-};
+}
 export const getStaticProps = async () =>{
 
 

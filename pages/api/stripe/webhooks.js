@@ -44,9 +44,6 @@ export default async function handler(req,res) {
         return res.status(400).send(`Webhook error: ${err.message}`)
     }
 
-    if(method === "POST"){
-
-    }
 
 
 

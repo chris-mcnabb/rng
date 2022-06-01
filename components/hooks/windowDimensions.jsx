@@ -15,14 +15,15 @@ const WindowDimensions = () => {
     const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
     useEffect(() => {
-        if (hasWindow) {
-            function handleResize() {
-                setWindowDimensions(getWindowDimensions());
-            }
 
-            window.addEventListener('resize', handleResize);
-            return () => window.removeEventListener('resize', handleResize);
-        }
+
+            const handleResize = () => {
+                if (hasWindow) {
+                    setWindowDimensions(getWindowDimensions());
+                    window.addEventListener('resize', handleResize);
+                    return () => window.removeEventListener('resize', handleResize);
+                }
+            }
     });
 
     return windowDimensions;

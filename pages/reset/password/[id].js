@@ -21,6 +21,7 @@ const ResetPassword = () => {
                 )
                 setReset(res.data)
             }catch(err){
+              console.log(err)
 
             }
         }
