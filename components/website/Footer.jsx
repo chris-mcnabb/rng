@@ -4,7 +4,7 @@ import monkey from '../../public/img/494.jpg'
 const Footer = () => {
 
     return (
-        <>
+
 
             <div className={styles.container}>
                 <div className={styles.wrapper}>
@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
 
             </div>
-        </>
+
     );
 };
 

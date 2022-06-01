@@ -51,9 +51,10 @@ const Navbar = () => {
     }
 
     return (
-        <>
-           <Modal showModal={showModal} setShowModal={setShowModal} location={'home'} title={title}/>
+
+
             <div className={styles.container2}>
+                <Modal showModal={showModal} setShowModal={setShowModal} location={'home'} title={title}/>
                 <div className={styles.wrapper2}>
                     <div className={styles.mainImage}>
                         <Image className={styles.logo} src={logo} alt="" height={160} width={200} objectFit="contain"/>
@@ -107,7 +108,7 @@ const Navbar = () => {
                 </div>
 
             </div>
-        </>
+
     );
 };
 

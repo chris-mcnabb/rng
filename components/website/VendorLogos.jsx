@@ -38,25 +38,27 @@ const imageWidth = (width) => {
     }
 }
     return (
-       <>
 
-           {logos ?<div className={styles.imageContainer}>
-               {logos.map((image, idx) => (
-                   image.vendorLogo &&
-                   <div className={imageStyle(width)} key={idx} as={as}>
+                <div>
+                    {logos ?<div className={styles.imageContainer}>
+                        {logos.map((image, idx) => (
+                            image.vendorLogo &&
+                            <div className={imageStyle(width)} key={idx} as={as}>
 
-                       <Image key={idx} src={image.vendorLogo} alt='' height={imageHeight(width)}
-                              width={imageWidth(width)} priority={true} objectFit='contain' as={as}
-                              crossOrigin="anonymous"/>
+                                <Image key={idx} src={image.vendorLogo} alt='' height={imageHeight(width)}
+                                       width={imageWidth(width)} priority={true} objectFit='contain' as={as}
+                                       crossOrigin="anonymous"/>
 
 
-                   </div>
+                            </div>
 
-               ))}
-           </div> : null
-           }
+                        ))}
+                    </div> : null
+                    }
 
-       </>
+                </div>
+
+
     );
 };
 
