@@ -1,0 +1,71 @@
+.imageContainer{
+    margin-top: 10px;
+    height: 10vh;
+    width: 300vw;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+    cursor: pointer;
+    white-space:nowrap;
+    transition: all 1.5s ease-in-out;
+    animation-name: scroll;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.mobileImageContainer{
+    display: none;
+}
+.scrollingImage{
+
+    background: repeat-x;
+}
+@media screen and (max-width: 850px) {
+    .imageContainer{
+       display: none;
+
+    }
+    .mobileImageContainer{
+        margin: 10px 0;
+      height: 13vh;
+        width: 300vw;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-evenly;
+        overflow: hidden;
+        cursor: pointer;
+        white-space:nowrap;
+        transition: all 1.5s ease-in-out;
+        animation-name: scroll;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+    }
+    @keyframes scroll {
+        0% {
+            transform: translateX(-50%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    .scrollingImage{
+       display: none;
+    }
+    .mobileScrollingImage{
+        margin-right: 25px;
+        background: repeat-x;
+    }
+
+}

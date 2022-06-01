@@ -1,0 +1,6 @@
+.container{
+    display: flex;
+}
+.lowerContainer{
+    flex: 6;
+}

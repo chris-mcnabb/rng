@@ -1,0 +1,49 @@
+.container{
+    min-height: calc(80vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    width: 150px;
+    border: 2px solid #1980b5;
+    border-radius: 5px;
+    padding: 15px 20px;
+    background-color:rgba(25, 128, 181, 0.3);
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transition: 0.2s all;
+    color: #1980b5;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+
+}
+.button:hover{
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.5);
+}
+.button:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+
+}
+
+.button:disabled {
+    display: none;
+    /*color: teal;*/
+    cursor: not-allowed;
+}
+.title{
+    color: #1980b5;
+}
+@media screen and (max-width: 850px) {
+   .title{
+       font-size: 20px;
+       text-align: center;
+   }
+    .button {
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+}

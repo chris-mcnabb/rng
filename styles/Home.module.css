@@ -1,0 +1,21 @@
+.container{
+
+    position: relative;
+    overflow: hidden;
+}
+.announcement{
+    margin-top: 50px;
+    width: 100%;
+    position: fixed;
+}
+.video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+.dimensions{
+    display: none;
+}

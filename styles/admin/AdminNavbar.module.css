@@ -1,0 +1,204 @@
+.navbar{
+    height: 80px;
+    border-bottom: 0.5px solid #e0dddd;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #1980b5;
+    padding: 0  60px;
+}
+.wrapper{
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search{
+    display: flex;
+
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 3px;
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 250px;
+}
+.input::placeholder{
+    font-size: 12px;
+}
+.items{
+    display: flex;
+    align-items: center;
+}
+.item{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
+}
+.item:last-child{
+    flex-direction: column;
+}
+.icon{
+    font-size: 20px;
+}
+.avatar{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+}
+.avatarText{
+    height: 45px;
+    width: 45px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 50%;
+    background-color: rgba(25, 128, 181, 0.2);
+    color: #1980b5;
+    border: 2px solid white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatarText:hover{
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.5);
+}
+.avatarText:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.infoBoxContainer{
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 500ms;
+    visibility: hidden;
+
+
+}
+.infoBoxContainerActive{
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+    height: 100vh;
+    width: 100vw;
+
+    right: 0;
+    left: -1500px;
+
+    position: absolute;
+}
+.infoBox{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 17px 5px rgba(0, 0, 0, 0.30);
+    box-shadow: 5px 5px 17px 5px rgba(0, 0, 0, 0.30);
+    position: fixed;
+    top: 70px;
+    right: 35px;
+    transition: all 5s ease-in-out;
+    width: 200px;
+}
+.popUpTitle{
+    flex: 1;
+    padding: 0;
+}
+.popUpTitle>h3, .popUpOptions>span{
+    margin-left: 10px;
+}
+.popUpOptions{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.popUpOptions>span{
+    display: flex;
+    align-content: center;
+
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.popUpOptions>span:last-child{
+    color: red;
+}
+.popUpIcon{
+    font-size: 15px;
+
+}
+.profile{
+    margin-left: 5px;
+}
+.counter{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+.logOut {
+    margin-right: 10px;
+
+}
+.settingsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+.productAddButton2,  .logoutButton {
+//width: 80px;
+    border: 2px solid white;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: rgba(205, 92, 92, 0.5);
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transition: 0.2s all;
+    color: indianred;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.productAddButton2:hover,  .logoutButton:hover{
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.5);
+}
+.productAddButton2:active,  .logoutButton:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+
+}

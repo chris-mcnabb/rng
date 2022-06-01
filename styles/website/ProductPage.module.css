@@ -1,0 +1,274 @@
+.container{
+    min-height: calc(100vh - 250px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+
+
+
+}
+.top {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    padding:  50px;
+}
+.left{
+    flex: 1;
+    flex-direction: column;
+}
+
+.right{
+    flex: 1;
+    padding: 20px 50px;
+    flex-direction: column;
+    border: 1px solid slategray;
+    border-radius: 10px;
+}
+.title{
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #1980b5;
+}
+.topImage{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    cursor: pointer;
+}
+
+.thumbnail{
+    padding-top: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.model{
+    font-weight: 600;
+}
+.desc{
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+}
+.buttonContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.sizeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+
+}
+.sizeContainer>span{
+    margin-left: 20px;
+}
+.orderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding: 20px 0;
+}
+.optionText{
+    color: #1980b5;
+    font-size: 15px;
+
+    font-weight: 600;
+}
+.option{
+padding: 2px 5px;
+    border-radius: 5px;
+    border: 2px solid #1980b5;
+}
+.option:focus{
+    outline: none;
+}
+.price{
+    font-weight: 700;
+    color: #1980b5;
+}
+.quantity {
+    width: 40px;
+    height: 30px;
+    margin-left: 20px;
+    border: 1px solid darkslategray;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.quantity:focus{
+    outline: none;
+    border: 2px solid darkslategray;
+}
+
+.button {
+
+    margin-left: 30px;
+    background-color: rgba(25, 128, 181, 0.3);
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.2s all;
+    color: #1980b5;
+    border: 2px solid #1980b5;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.button:hover,
+.favoriteButton:hover,
+.savedButton:hover{
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.75);
+}
+.button:active,
+.favoriteButton:active,
+.savedButton:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+
+}
+.button:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.favoriteSpan{
+    margin-right: 10px;
+}
+.favoriteButton{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.5);
+    color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.big{
+
+}
+.small{
+display: none;
+}
+.savedButton{
+    display: flex;
+    align-items: center;
+    background-color: red;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.bottom{
+    display: flex;
+
+    justify-content: center;
+    padding: 0 50px 50px;
+
+}
+
+.bottomRight>h2{
+    color: #1980b5;
+    font-weight: 300;
+    text-align: center;
+}
+.bottomRight{
+    padding: 20px 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+@media screen and (max-width: 850px) {
+    .top{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    .left{
+        padding: 10px;
+    }
+  .right{
+      border: none;
+      padding: 5px 10px;
+  }
+    .title{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .price{
+        font-size: 15px;
+    }
+    .model{
+        font-weight: 300;
+    }
+    .desc{
+        font-size: 12px;
+        margin-bottom: 5px;
+        letter-spacing: 0.5px;
+        font-weight: 300;
+    }
+    .topImage{
+        width: 70%;
+    }
+    .quantity {
+        width: 25px;
+        height: 20px;
+        font-size: 13px;
+    }
+    .button, .savedButton, .favoriteButton {
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+    .big{
+        display: none;
+    }
+    .small{
+        display: contents;
+    }
+    .bottom{
+        display: flex;
+        width: 100%;
+
+        justify-content: center;
+        padding: 0 10px 10px;
+
+    }
+    .bottomRight>h2{
+        font-size: 15px;
+        text-align: center;
+    }
+    .bottomRight{
+        padding: 20px 15px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .bottomRight>ul{
+        font-size: 12px;
+    }
+
+}

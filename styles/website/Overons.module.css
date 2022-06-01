@@ -1,0 +1,154 @@
+.container{
+   min-height: 80vh;
+    display: flex;
+    background-color: rgb(242,245,247);
+    flex-direction: column;
+
+}
+.backArrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.terug{
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+.back{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.buttonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sub{
+    padding: 10px 20px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background-color: indianred;
+
+}
+.sectionWrapper{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.staffWrapper{
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.infoContainer{
+    width: 75%;
+    padding: 10px;
+    position: relative;
+    margin: 0 10px;
+
+}
+.infoTitle{
+    display: flex;
+
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgba(205, 92, 92, 0.2);
+    color: indianred;
+    font-weight: 600;
+
+}
+.infoTitle:hover{
+    font-weight: 800;
+}
+.infoTitle::before{
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+}
+.infoActive{
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+//justify-content: flex-start;
+}
+.info{
+    position: relative;
+    background: white;
+    height: 0;
+    font-size: 20px;
+    text-align: justify;
+    width: 780px;
+    overflow: hidden;
+
+}
+@media screen and (max-width: 850px) {
+    .back>h1{
+        font-size: 20px;
+    }
+    .sub{
+        padding: 7px 5px;
+        margin-left: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        color: white;
+        background-color: indianred;
+    }
+    .sectionWrapper{
+        padding-top: 15px;
+    }
+    .sectionWrapper>h1{
+        font-size: 20px;
+    }
+    .infoTitle{
+
+        padding: 10px 20px;
+        font-size: 13px;
+        cursor: pointer;
+        background-color: rgba(205, 92, 92, 0.2);
+        color: indianred;
+        font-weight: bold;
+
+    }
+    .infoActive{
+        padding: 10px 10px;
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+    //justify-content: flex-start;
+    }
+    .info>p{
+        position: relative;
+        background: white;
+        height: 0;
+        font-size: 12px;
+        text-align: justify;
+        width: 780px;
+        overflow: hidden;
+
+    }
+}
+

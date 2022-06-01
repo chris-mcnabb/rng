@@ -1,0 +1,85 @@
+
+.container {
+
+    width: 100%;
+    margin-top: 10px;
+    background-color: #1980b5;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.contactContainer {
+    display: flex;
+    color: white;
+
+    padding: 20px 0 ;
+    align-items: center;
+    justify-content: space-around;
+}
+.addressContainer {
+    display: flex;
+    flex-direction: column;
+}
+.contactInfo {
+    font-weight: 300;
+    margin-right: 15px;
+    font-size: 18px;
+
+}
+.creator{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.app{
+    margin-right: 10px;
+}
+.pic{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+
+}
+.attribute{
+
+}
+.pic>a{
+    font-size: 3px;
+    color: black;
+    text-align: center;
+}
+@media screen and (max-width: 720px) {
+    .container{
+
+        margin-top: 20px;
+        justify-content: center;
+
+    }
+.contactContainer{
+    padding: 10px 0 10px;
+}
+    .contactInfo {
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .creator{
+        font-size: 10px;
+    }
+    .pic{
+      display: none;
+    }
+
+
+}

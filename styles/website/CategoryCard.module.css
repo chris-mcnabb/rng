@@ -1,0 +1,142 @@
+.container{
+    flex: 1;
+    margin: 5px 10px;
+    min-width: 280px;
+    max-width: 300px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5fbfd;
+
+    position: relative;
+    border-radius: 15px;
+}
+.serviceContainer{
+    flex: 1;
+
+    margin: 5px 10px;
+    min-width: 250px;
+    max-width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5fbfd;
+
+    cursor: pointer;
+    border-radius: 5px;
+}
+.img{
+
+}
+
+.info{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.info:hover{
+    opacity: 1;
+}
+.iconContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.desc{
+    color: white;
+    font-size: 25px;
+    padding-bottom: 40px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    text-align: center;
+
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+}
+.image{
+    height: 75%;
+    z-index: 2;
+}
+.title{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding-bottom:  20px;
+
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    transition: all 0.5s ease;
+}
+.icon:hover{
+    background-color: #e9f5f5;
+    transform: scale(1.1);
+}
+@media screen and (max-width: 850px) {
+
+    .container{
+        flex: 1;
+        margin: 5px 10px;
+
+        max-width: 90px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f5fbfd;
+
+        position: relative;
+        border-radius: 15px;
+
+    }
+    .img{
+        //display: none;
+
+    }
+    .info{
+        opacity: 1;
+
+    }
+    .title{
+        font-size: 25px;
+        padding-bottom:  10px;
+
+    }
+    .desc{
+
+        font-size: 15px;
+        padding-bottom: 10px;
+        letter-spacing: 0.5px;
+
+
+
+    }
+}

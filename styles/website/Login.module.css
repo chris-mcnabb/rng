@@ -1,0 +1,219 @@
+.container{
+
+    padding:  20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1980b5;
+}
+.resetContainer{
+    min-height: calc(80vh - 100px);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.orderConfirm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper{
+
+    width: 40%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(119, 136, 153, 0.33);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.close{
+    width: 30px;
+    height: 30px;
+    background-color: #1980b5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+.resetTitle{
+    font-size: 22px;
+    font-weight: 500;
+    color: #1980b5;
+}
+.title{
+    font-size: 28px;
+    font-weight: 500;
+    color: #1980b5;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+    flex: 1;
+    min-width: 60px;
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid lightgray;
+}
+.input:focus{
+    outline: none;
+    border: 2px solid #1980b5;
+}
+.button{
+
+    border: 2px solid #1980b5;
+    border-radius: 5px;
+    padding: 15px 20px;
+    background-color:rgba(25, 128, 181, 0.3);
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transition: 0.2s all;
+    color: #1980b5;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+
+ }
+.guestButton{
+    border: 2px solid #1980b5;
+    border-radius: 5px;
+    padding: 15px 20px;
+    background-color:rgba(25, 128, 181, 0.3);
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transition: 0.2s all;
+    color: #1980b5;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+.button:hover{
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.5);
+}
+.button:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+
+}
+
+.button:disabled {
+    display: none;
+     /*color: teal;*/
+    cursor: not-allowed;
+}
+.link{
+    margin: 5px 0px;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.error{
+    color: red;
+    text-align: center;
+}
+.options{
+    margin-top: 10px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.options>span{
+    margin-bottom: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+
+}
+.options>span:hover{
+    font-weight: bold;
+}
+.input2{
+
+    min-width: 40px;
+    margin: 10px 20px 10px 0;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid lightgray;
+}
+@media screen and (max-width: 850px) {
+    .wrapper{
+        min-height :10vh;
+         min-width: 60%;
+    }
+    .title{
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+    }
+    .input{
+        flex: 1;
+        text-align: center;
+        margin: 10px 0px;
+        padding: 5px;
+        border-radius: 7px;
+        border: 1px solid lightgray;
+    }
+    .input:focus{
+        outline: none;
+        border: 2px solid lightgray;
+    }
+    .button{
+       display: flex;
+
+       align-items: center;
+        justify-content: center;
+        border: 2px solid #1980b5;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background-color:rgba(25, 128, 181, 0.3);
+        box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+        transition: 0.2s all;
+        color: #1980b5;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin: 10px 0;
+
+    }
+    .options>span{
+        margin-bottom: 7px;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 2px 5px;
+        font-weight: bold;
+        border: 1px solid #1980b5;
+        border-radius: 5px;
+        background-color: ghostwhite;
+        box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+
+    }
+    .resetTitle{
+        font-size: 15px;
+        text-align: center;
+    }
+}
