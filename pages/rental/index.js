@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from '../../styles/website/Rentals.module.css'
 
-import "react-date-range/dist/styles.css"; // main css file
-import "react-date-range/dist/theme/default.css"; // theme css file
+
 
 const Rentals = () => {
     return (
