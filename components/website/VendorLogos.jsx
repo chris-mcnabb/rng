@@ -43,7 +43,7 @@ const imageWidth = (width) => {
                     {logos ?<div className={styles.imageContainer}>
                         {logos.map((image) => (
                             image.pic.category === 'vendorLogo' &&
-                            <div className={imageStyle(width)} key={image._id} as={as}>
+                            <div className={imageStyle(width)} key={idx} as={as}>
 
                                 <Image key={image._id} src={image.pic.img} alt='' height={imageHeight(width)}
                                        width={imageWidth(width)} priority={true} objectFit='contain' as={as}
