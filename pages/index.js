@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+import { Fragment } from "react"
 import styles from '../styles/Home.module.css'
 import Announcement from "../components/website/Announcement";
 import {useState} from "react";
