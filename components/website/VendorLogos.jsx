@@ -2,11 +2,33 @@
 import styles from "../../styles/website/VendorLogo.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 
 
 
-const VendorLogos = ({logos, width, as}) => {
+const VendorLogos = ({ width, as}) => {
+  const [logos, setLogos] = useState([])
+
+    useEffect(()=>{
+        const loadVendors = async() => {
+            try{
+                const res = await axios.get(`/api/images`);
+
+                res.data.map((pic)=>{
+                    if(pic.pic.category==='vendorLogo'){
+                        setLogos(prev=>[...prev, pic.pic])
+                    }
+                })
+
+
+            }catch(err){
+                console.log(err)
+            }
+        }
+        loadVendors()
+    },[])
 
 const imageStyle = (width) => {
         if(width > 850){
@@ -37,15 +59,16 @@ const imageWidth = (width) => {
 
     }
 }
+
     return (
 
                 <div>
-                    {logos ?<div className={styles.imageContainer}>
-                        {logos.map((image) => (
-                            image.pic.category === 'vendorLogo' &&
+                   <div className={styles.imageContainer}>
+                        {logos.map((image, idx) => (
+
                             <div className={imageStyle(width)} key={idx} as={as}>
 
-                                <Image key={image._id} src={image.pic.img} alt='' height={imageHeight(width)}
+                                <Image  src={image.img} alt='' height={imageHeight(width)}
                                        width={imageWidth(width)} priority={true} objectFit='contain' as={as}
                                        crossOrigin="anonymous"/>
 
@@ -53,8 +76,8 @@ const imageWidth = (width) => {
                             </div>
 
                         ))}
-                    </div> : null
-                    }
+                    </div>
+
 
                 </div>
 

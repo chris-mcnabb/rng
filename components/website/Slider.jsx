@@ -2,7 +2,27 @@ import styles from "../../styles/website/Slider.module.css"
 import Image from "next/image";
 import {useEffect, useState} from "react";
 import Link from 'next/link'
-const Slider = ({pics, as}) => {
+import axios from "axios";
+const Slider = ({ as}) => {
+const [pics, setPics] = useState([])
+    useEffect(()=>{
+        const loadVendors = async() => {
+            try{
+                const res = await axios.get(`/api/images`);
+
+                res.data.map((pic)=>{
+                    if(pic.pic.category==='webPic'){
+                        setPics(prev=>[...prev, pic.pic])
+                    }
+                })
+
+
+            }catch(err){
+                console.log(err)
+            }
+        }
+        loadVendors()
+    },[])
 
     const [index, setIndex] = useState(0)
 
@@ -27,19 +47,19 @@ const Slider = ({pics, as}) => {
         </div>
 
 
-           { pics ? <div className={styles.wrapper} style={{transform: `translateX(${-100 * index}vw)`}}>
+         <div className={styles.wrapper} style={{transform: `translateX(${-100 * index}vw)`}}>
 
-            {pics.map((img) => (
+            {pics.map((img, idx) => (
 
-                img.pic.category === 'webPic' &&
-                <div key={img._id} className={styles.imgContainer}>
-                    <Image className={styles.img} src={img.pic.img} priority={true} alt="" layout="fill" as={as}
+
+                <div key={idx} className={styles.imgContainer}>
+                    <Image className={styles.img} src={img.img} priority={true} alt="" layout="fill" as={as}
                            objectFit="cover"/>
 
                 </div>
             ))}
 
-        </div> : null}
+        </div>
 
     </div>
 
