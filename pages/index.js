@@ -37,7 +37,7 @@ export default function Home({images}) {
 
     )
 }
-export const getServerSideProps = async () =>{
+export const getInitialProps = async () =>{
 
 
     const img = await axios.get(process.env.VERCEL_URL+`/api/images`);
