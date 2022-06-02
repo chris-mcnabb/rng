@@ -1,13 +1,11 @@
 import {useState, useRef} from 'react';
 import styles from "../../styles/website/Shop.module.css"
 import Link from "next/link"
-
 import CategoryCard from "../../components/website/CategoryCard";
 import axios from "axios";
 import Head from "next/head";
-
-
 import ArrowBack from "../../components/icons/ArrowBack";
+
 const Shop = ({categories, name}) => {
 
 
@@ -38,14 +36,14 @@ const Shop = ({categories, name}) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
           <div  className={styles.cardContainer}>
-            {categories.map((category, idx)=>(
+            {categories.map((category, idx)=> {
 
-              <div  key={idx}>
+         return   <div key={idx}>
 
-                <CategoryCard  fill='fill' index='all' name={category.name} desc={category.desc} img={category.img}/>
+                <CategoryCard fill='fill' index='all' name={category.name} desc={category.desc} img={category.img}/>
 
               </div>
-            ))}
+            })}
           </div>
 
         </div>
