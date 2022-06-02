@@ -53,7 +53,7 @@ console.log(list)
 export default Shop;
 Shop.layout = "L3";
 export const getStaticProps = async() => {
-  const res = await axios.get(process.env.VERCEL_URL+`/api/catmenu`);
+  const res = await axios.get(`/api/catmenu`);
   const data = await res.data
 
 
@@ -62,6 +62,7 @@ export const getStaticProps = async() => {
       categories: res.data,
 
 
-    }
+    },
+    revalidate: 2,
   }
 };
