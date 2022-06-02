@@ -55,11 +55,8 @@ Shop.layout = "L3";
 export const getStaticProps = async() => {
   const res = await axios.get(process.env.VERCEL_URL+`/api/catmenu`);
   const data = await res.data
-  if(!data){
-    return {
-      notFound: true,
-    }
-  }
+
+
   return{
     props:{
       categories: res.data,
