@@ -40,7 +40,7 @@ console.log(categories)
 
          return   <div key={idx}>
 
-                <CategoryCard fill='fill' index='all' name={categories[idx].name} desc={categories[idx].desc} img={categories[idx].img}/>
+                <CategoryCard key={idx} fill='fill' index='all' name={categories[idx].name} desc={categories[idx].desc} img={categories[idx].img}/>
 
               </div>
             })}
