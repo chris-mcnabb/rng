@@ -52,7 +52,7 @@ console.log(list)
 
 export default Shop;
 Shop.layout = "L3";
-export const getServerSideProps = async() => {
+export const getStaticProps = async() => {
   const res = await axios.get(process.env.VERCEL_URL+`/api/catmenu`);
 
 
