@@ -7,7 +7,7 @@ const CatMenuSchema = new mongoose.Schema(
             required: true,
             maxlength: 60
         },
-        subCat: {
+        subCategories: {
           type: [String],
         },
 

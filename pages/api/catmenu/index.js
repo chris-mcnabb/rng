@@ -19,7 +19,8 @@ export default async function handler(req, res) {
                 categories = await CatMenu.find({name: category})
               ;
             } else {
-                categories = await CatMenu.find();
+
+                categories = await CatMenu.find().select('-subCategories -createdAt -updatedAt');
             }
 
             res.status(200).json(categories);
