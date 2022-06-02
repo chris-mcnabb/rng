@@ -8,7 +8,7 @@ import Head from "next/head";
 
 
 import ArrowBack from "../../components/icons/ArrowBack";
-const Shop = ({categories}) => {
+const Shop = ({categories, name}) => {
 
 
 
@@ -42,7 +42,7 @@ const Shop = ({categories}) => {
 
               <div  key={idx}>
 
-                <CategoryCard  fill='fill' index='all' category={category}/>
+                <CategoryCard  fill='fill' index='all' name={category.name} desc={category.desc} img={category.img}/>
 
               </div>
             ))}
@@ -59,6 +59,7 @@ export const getServerSideProps = async() => {
   return{
     props:{
       categories: res.data,
+
 
     }
   }
