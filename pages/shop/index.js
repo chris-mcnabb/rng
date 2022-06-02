@@ -8,10 +8,10 @@ import Head from "next/head";
 
 import ArrowBack from "../../components/icons/ArrowBack";
 const Shop = ({categories, name}) => {
+const [list, setList] = useState(categories)
 
 
-
-console.log(categories)
+console.log(list)
     return (
         <div className={styles.container}>
         <div className={styles.header}>
@@ -36,11 +36,11 @@ console.log(categories)
                 <link rel="icon" href="/favicon.ico" />
             </Head>
           <div  className={styles.cardContainer}>
-            {categories.map((category, idx)=> {
+            {list.map((category, idx)=> {
 
          return   <div key={idx}>
 
-                <CategoryCard key={idx} fill='fill' index='all' name={categories[idx].name} desc={categories[idx].desc} img={categories[idx].img}/>
+                <CategoryCard key={idx} fill='fill' index='all' name={list[idx].name} desc={list[idx].desc} img={list[idx].img}/>
 
               </div>
             })}
@@ -52,8 +52,14 @@ console.log(categories)
 
 export default Shop;
 Shop.layout = "L3";
-export const getServerSideProps = async() => {
+export const getStaticProps = async() => {
   const res = await axios.get(process.env.VERCEL_URL+`/api/catmenu`);
+  const data = await res.data
+  if(!data){
+    return {
+      notFound: true,
+    }
+  }
   return{
     props:{
       categories: res.data,
