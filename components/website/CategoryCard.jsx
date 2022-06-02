@@ -21,7 +21,7 @@ const CategoryCard = ({category, fill, index}) => {
             <div className={styles.circle}/>
 
          <div  className={styles.img}>
-             <Image src={category.img}   alt="" layout={fill} objectFit="contain"/>
+             <Image src={category.img}   alt="" width={300} height={350} objectFit="contain"/>
          </div>
             <Link href={`/shop/category/${category.name}`} passHref >
             <div className={styles.info}>

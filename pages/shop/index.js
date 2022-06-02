@@ -13,7 +13,7 @@ const Shop = ({categories}) => {
 
 
 
-console.log(categories)
+
     return (
         <div className={styles.container}>
         <div className={styles.header}>
@@ -38,9 +38,9 @@ console.log(categories)
                 <link rel="icon" href="/favicon.ico" />
             </Head>
           <div  className={styles.cardContainer}>
-            {categories.map((category)=>(
+            {categories.map((category, idx)=>(
 
-              <div  key={category._id}>
+              <div  key={idx}>
 
                 <CategoryCard  fill='fill' index='all' category={category}/>
 

@@ -33,14 +33,17 @@ const Product = ({product, images}) => {
     const { height, width } = windowDimensions();
     useEffect(()=>{
         const loadUser = async() => {
+          if(session){
             try{
-                const res = await axios.get(`/api/cart?cart=${session.id}`)
-                const favorite = await axios.get(`/api/favorite?favorite=${session.id}`)
-                setCart(res.data)
-                setFavoriteCart(favorite.data)
+              const res = await axios.get(`/api/cart?cart=${session.id}`)
+              const favorite = await axios.get(`/api/favorite?favorite=${session.id}`)
+              setCart(res.data)
+              setFavoriteCart(favorite.data)
             }catch(err){
-                console.log(err)
+              console.log(err)
             }
+          }
+
         }
     loadUser()
     },[session])
@@ -70,7 +73,7 @@ const Product = ({product, images}) => {
    }
 }
 
-    console.log(Object.keys(product).includes('color'))
+
 
     return (
         <>
