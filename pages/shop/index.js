@@ -13,7 +13,7 @@ const Shop = ({categories}) => {
 
 
 
-
+console.log(categories)
     return (
         <div className={styles.container}>
         <div className={styles.header}>
@@ -54,3 +54,12 @@ const Shop = ({categories}) => {
 
 export default Shop;
 Shop.layout = "L3";
+export const getServerSideProps = async() => {
+  const res = await axios.get(process.env.VERCEL_URL+`/api/catmenu`);
+  return{
+    props:{
+      categories: res.data,
+
+    }
+  }
+};
