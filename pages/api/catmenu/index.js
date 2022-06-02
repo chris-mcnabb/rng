@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     } = req;
 
 
-    await clientPromise
+    await dbConnect()
 
     if(method==="GET"){
         try {
