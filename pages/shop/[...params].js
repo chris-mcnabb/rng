@@ -179,8 +179,8 @@ Product.layout = "L3";
 
 export const getServerSideProps = async ({params}) =>{
 
-    const res = await axios.get(process.env.VERCEL_URL+`/api/products/${params.params[1]}`);
-    const img = await axios.get(process.env.VERCEL_URL+`/api/images`);
+    const res = await axios.get(process.env.DOMAIN+`/api/products/${params.params[1]}`);
+    const img = await axios.get(process.env.DOMAIN+`/api/images`);
     return{
         props:{
             product: res.data,

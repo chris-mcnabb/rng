@@ -52,7 +52,7 @@ export default Overons;
 Overons.layout = "L3";
 
 export const getServerSideProps = async () => {
-    const img = await axios.get(process.env.VERCEL_URL+`/api/images`);
+    const img = await axios.get(process.env.DOMAIN+`/api/images`);
 
     return{
         props: {
