@@ -10,7 +10,7 @@ const Username = () => {
     const handleClick = async(e) => {
         e.preventDefault()
         try{
-            const res = await axios.post(process.env.DOMAIN+`/api/reset`, {email, request: 'username'})
+            const res = await axios.post(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/reset`, {email, request: 'username'})
             setSuccess(res.data)
         }catch(err){
             console.log(err)

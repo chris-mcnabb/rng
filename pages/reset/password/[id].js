@@ -16,7 +16,7 @@ const ResetPassword = () => {
         inputs.first !== inputs.second && setError();
         if(inputs.first === inputs.second){
             try{
-                const res = await axios.put(process.env.DOMAIN+`/api/users/${id}`,
+                const res = await axios.put(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/users/${id}`,
                     {password: inputs.first}
                 )
                 setReset(res.data)

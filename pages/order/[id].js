@@ -139,7 +139,7 @@ const Order = ({order}) => {
 Order.layout = "L3";
 export const getServerSideProps = async ({params}) =>{
 
-    const res = await axios.get(process.env.DOMAIN+`/api/orders/${params.id}`);
+    const res = await axios.get(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/orders/${params.id}`);
 
     return{
         props:{

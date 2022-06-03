@@ -50,7 +50,7 @@ const Register = () => {
     const onSubmit = async(data) => {
         console.log(data)
         try{
-            const res = await axios.post(process.env.DOMAIN+`/api/users`,
+            const res = await axios.post(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/users`,
                 {
                     firstName: data.firstName,
                     lastName: data.lastName,

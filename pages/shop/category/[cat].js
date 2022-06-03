@@ -88,8 +88,8 @@ Product.layout = "L3";
 
 export const getServerSideProps = async ({params}) =>{
 
-    const res = await axios.get(process.env.DOMAIN+`/api/products?category=${params.cat}`);
-    const cat = await axios.get(process.env.DOMAIN+`/api/catmenu?category=${params.cat}`);
+    const res = await axios.get(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/products?category=${params.cat}`);
+    const cat = await axios.get(process.env.NEXT_PUBLIC_VERCEL_URL+`/api/catmenu?category=${params.cat}`);
 
 
     return{

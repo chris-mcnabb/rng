@@ -13,7 +13,7 @@ export default async function activateUser(req, res) {
         return res.status(401).json({message: 'Cannot validate User!!'})
     }
 
-const response = await axios.get(process.env.DOMAIN+`api/users/pending/${id}`)
+const response = await axios.get(process.env.NEXT_PUBLIC_VERCEL_URL+`api/users/pending/${id}`)
 
     if(response.status >=400){
         return res.status(401).json({message: 'Cannot validate User!!'})
