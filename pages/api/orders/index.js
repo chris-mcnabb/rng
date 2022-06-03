@@ -18,7 +18,7 @@ const handler = async(req,res) => {
             }
         }
         if (method === "POST") {
-            console.log(req.body.customer.firstName)
+
             try {
                 const order = await Order.create(req.body)
                 await sendConfirmationEmail({toUser: order.customer.firstName, id: order._id, userRequest: 'order'})
